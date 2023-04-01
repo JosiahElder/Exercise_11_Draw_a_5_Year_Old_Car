@@ -1,6 +1,7 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Graphics;
+import java.awt.Color;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +9,7 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
 
-        Car car = new Car();
+        Car car = new Car(Color.RED);
 
         JPanel panel = new JPanel() {
             @Override
