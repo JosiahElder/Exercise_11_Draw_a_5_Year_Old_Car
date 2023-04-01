@@ -36,5 +36,7 @@ public class Car {
         g.setColor(tireColor);
         g.fillOval(xPosition + tireSpacing,
                 yPosition + height, tireWidth, tireHeight);
+        g.fillOval(xPosition + width - tireSpacing - tireWidth,
+                    yPosition + height, tireWidth, tireHeight);
     }
 }
