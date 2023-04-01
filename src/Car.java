@@ -13,9 +13,14 @@ public class Car {
     private int tireHeight;
     private int tireSpacing;
     //------------------------------------
+    private Color carTopColor;
+    private int topHeight;
+    private int topWidth;
+
 
     public Car(Color bodyColor, int height, int width, int xPosition, int yPosition,
-                Color tireColor, int tireWidth, int tireHeight, int tireSpacing)
+                Color tireColor, int tireWidth, int tireHeight, int tireSpacing,
+                Color carTopColor, int topHeight, int topWidth)
     {
         this.bodyColor = bodyColor;
         this.height = height;
@@ -27,6 +32,10 @@ public class Car {
         this.tireWidth = tireWidth;
         this.tireHeight = tireHeight;
         this.tireSpacing = tireSpacing;
+        //------------------------------------
+        this.carTopColor = carTopColor;
+        this.topHeight = topHeight;
+        this.topWidth = topHeight;
     }
 
     public void drawVehicle(Graphics g) {
@@ -38,5 +47,10 @@ public class Car {
                 yPosition + height, tireWidth, tireHeight);
         g.fillOval(xPosition + width - tireSpacing - tireWidth,
                     yPosition + height, tireWidth, tireHeight);
+        //------------------------------------
+        g.setColor(carTopColor);
+        g.fillRect(xPosition + 10 + topWidth, yPosition + topWidth + topHeight * (-2),
+                    width - 4 * topWidth, topHeight);
+        g.fillRect(xPosition, yPosition + topHeight, width, 5);
     }
 }
