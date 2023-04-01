@@ -1,5 +1,6 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.awt.Graphics;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class Main {
         JPanel panel = new JPanel() {
             @Override
             public void paintComponent(Graphics g) {
+                super.paintComponent(g);
                 car.drawVehicle(g);
             }
         };
